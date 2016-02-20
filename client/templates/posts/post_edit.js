@@ -19,7 +19,11 @@ throwError(error.reason); } else {
         Router.go('postPage', {_id: currentPostId});
       }
 }); },
-'click .delete': function(e) { e.preventDefault();
-if (confirm("Delete this post?")) { var currentPostId = this._id; Posts.remove(currentPostId); Router.go('postsList');
+'click .delete': function(e) {
+  e.preventDefault();
+  if (confirm("Delete this post?")) {
+    var currentPostId = this._id;
+    Posts.remove(currentPostId);
+    Router.go('home');
 } }
 });
