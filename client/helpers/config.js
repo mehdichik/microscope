@@ -20,6 +20,7 @@ Accounts.ui.navigate = function (route, hash) {
         Router.go(route, hash);
     }
 }
+
 Accounts.ui.config({
     requestPermissions: {},
     extraSignupFields: [{
