@@ -37,7 +37,21 @@ Accounts.ui.config({
             return true;
           }
         }
-    },  {
+    },  
+    {
+        fieldName: 'email',
+        fieldLabel: 'Email',
+        inputType: 'text',
+        visible: true,
+        validate: function(value, errorFunction) {
+          if (!value) {
+            errorFunction("Please write your email");
+            return false;
+          } else {
+            return true;
+          }
+        }
+    },{
         fieldName: 'gender',
         showFieldLabel: false,      // If true, fieldLabel will be shown before radio group
         fieldLabel: 'Gender',
@@ -189,5 +203,5 @@ Accounts.ui.config = function(options) {
 };
 
 Accounts.ui._passwordSignupFields = function() {
-    return Accounts.ui._options.passwordSignupFields || "EMAIL_ONLY";
+    return Accounts.ui._options.passwordSignupFields || "USERNAME_ONLY";
 };
