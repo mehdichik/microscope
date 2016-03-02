@@ -10,7 +10,8 @@ if (!Accounts.ui._options) {
         forceApprovalPrompt: {},
         forceEmailLowercase: false,
         forceUsernameLowercase: false,
-        forcePasswordLowercase: false
+        forcePasswordLowercase: false,
+        sendVerificationEmail: true
     };
 }
 
@@ -24,8 +25,8 @@ Accounts.ui.navigate = function (route, hash) {
 Accounts.ui.config({
     requestPermissions: {},
     extraSignupFields: [{
-        fieldName: 'first-name',
-        fieldLabel: 'First name',
+        fieldName: 'name',
+        fieldLabel: 'Full Name',
         inputType: 'text',
         visible: true,
         validate: function(value, errorFunction) {
@@ -36,12 +37,7 @@ Accounts.ui.config({
             return true;
           }
         }
-    }, {
-        fieldName: 'last-name',
-        fieldLabel: 'Last name',
-        inputType: 'text',
-        visible: true,
-    }, {
+    },  {
         fieldName: 'gender',
         showFieldLabel: false,      // If true, fieldLabel will be shown before radio group
         fieldLabel: 'Gender',
@@ -66,12 +62,12 @@ Accounts.ui.config({
         empty: 'Please select your country of residence',
         data: [{
             id: 1,
-            label: 'United States',
-            value: 'us'
+            label: 'Germany',
+            value: 'de'
           }, {
             id: 2,
-            label: 'Spain',
-            value: 'es',
+            label: 'Tunisia',
+            value: 'tn',
         }],
         visible: true
     }, {
