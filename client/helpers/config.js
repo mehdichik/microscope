@@ -11,7 +11,8 @@ if (!Accounts.ui._options) {
         forceEmailLowercase: false,
         forceUsernameLowercase: false,
         forcePasswordLowercase: false,
-        sendVerificationEmail: true
+        
+        
     };
 }
 
@@ -98,7 +99,7 @@ Accounts.ui.config({
                 return false;
             }
         }
-    }]
+    }],
 });
 Accounts.ui.config = function(options) {
     // validate options keys

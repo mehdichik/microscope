@@ -11,6 +11,8 @@ if (Posts.find().count() === 0) {
     username: "mehdichik",
     email: "mehdichik@gmail.com",
     password: "mallouka",
+    gender:"m",
+    country:"tn",
   });
 
   var tomId = Accounts.createUser({
@@ -20,6 +22,8 @@ if (Posts.find().count() === 0) {
     username: "tom",
     email: "tom@example.com",
     password: "123456",
+    gender:"m",
+    country:"tn",
   });
   var mehdi = Meteor.users.findOne(mehdiId);
   var tom = Meteor.users.findOne(tomId);
